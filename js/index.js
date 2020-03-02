@@ -1,6 +1,12 @@
 "use strict";
 
-obtenerClima("Santiago");
+const btn = document.getElementById("consultar");
+const ciudadInput = document.getElementById("ciudad");
+
+btn.addEventListener("click", function(event){
+    let ciudad = ciudadInput.value;
+    obtenerClima(ciudad);
+});
 
 function obtenerClima(ciudad) {
 
@@ -13,5 +19,8 @@ function obtenerClima(ciudad) {
         })
         .then(function (content) {
             console.log(content);
+
+            const icon = document.getElementById("hi");
+            icon.src = `http://openweathermap.org/img/wn/${content.weather[0].icon}@2x.png`;
         });
 }
