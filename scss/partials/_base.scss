@@ -17,3 +17,11 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+@media (min-width: 50em) {
+	.container {
+        width: 80%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}

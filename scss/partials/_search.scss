@@ -2,6 +2,21 @@
     display: flex;
     padding: 1em;
 
+    &__input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #fff;
+        flex: 3;
+        padding: 1em;
+        color: #fff;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        &:focus {
+            outline: none;
+        }
+    }
+
+
     &__dropdown {
         flex: 3;
         border: none;
@@ -9,6 +24,22 @@
     }
 
     &__button {
+        margin-left: 1em;
         flex: 1;
+        border: 3px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding: 0.3em;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        transition: background-color .3s ease-out, color .3s ease-in;
+
+        &:hover {
+            background-color: #fff;
+            color: $primary-color;
+        }
     }
 }

@@ -10,7 +10,7 @@
         margin-top: 0;
         text-shadow: none;
     }
-    
+
     &__icon {
         background-color: blue;
     }
@@ -27,6 +27,7 @@
         font-weight: normal;
         margin-top: 0;
         margin-bottom: 0;
+
         .degrees {
             position: absolute;
         }
@@ -36,4 +37,42 @@
         font-size: 1.4rem;
     }
 
+}
+
+@media (min-width: 35em) {
+    .weather {
+        display: grid;
+        grid-template-rows: 3;
+        grid-template-columns: 3;
+        text-align: center;
+
+        &__date {
+            grid-row: span 1;
+            grid-column: span 3;
+        }
+
+        &__city {
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+
+        &__icon {
+            grid-row: span 2;
+            grid-column: span 1;
+            justify-self: center;
+        }
+
+        &__temperatura {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+
+        &__description {
+            grid-row: span 1;
+            grid-column: span 1;
+            margin: 0;
+        }
+
+
+    }
 }

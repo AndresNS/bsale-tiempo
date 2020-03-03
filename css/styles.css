@@ -19,6 +19,13 @@ body {
   background-attachment: fixed;
 }
 
+@media (min-width: 50em) {
+  .container {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
 .weather {
   padding: 2em;
   color: #fff;
@@ -53,9 +60,52 @@ body {
   font-size: 1.4rem;
 }
 
+@media (min-width: 35em) {
+  .weather {
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: 3;
+    text-align: center;
+  }
+  .weather__date {
+    grid-row: span 1;
+    grid-column: span 3;
+  }
+  .weather__city {
+    grid-row: span 2;
+    grid-column: span 1;
+  }
+  .weather__icon {
+    grid-row: span 2;
+    grid-column: span 1;
+    justify-self: center;
+  }
+  .weather__temperatura {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  .weather__description {
+    grid-row: span 1;
+    grid-column: span 1;
+    margin: 0;
+  }
+}
 .search {
   display: flex;
   padding: 1em;
+}
+.search__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+  flex: 3;
+  padding: 1em;
+  color: #fff;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.search__input:focus {
+  outline: none;
 }
 .search__dropdown {
   flex: 3;
@@ -63,7 +113,22 @@ body {
   padding: 1em;
 }
 .search__button {
+  margin-left: 1em;
   flex: 1;
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.3em;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s ease-out, color 0.3s ease-in;
+}
+.search__button:hover {
+  background-color: #fff;
+  color: #177cc0;
 }
 
 .city-bg {
@@ -90,24 +155,24 @@ body {
   flex: 1;
 }
 .city-bg__building:nth-child(2) {
-  height: 40vh;
-  flex: 1;
+  height: 31vh;
+  flex: 2;
 }
 .city-bg__building:nth-child(3) {
-  height: 36vh;
-  flex: 1;
+  height: 30vh;
+  flex: 2;
 }
 .city-bg__building:nth-child(4) {
-  height: 33vh;
+  height: 38vh;
   flex: 1;
 }
 .city-bg__building:nth-child(5) {
-  height: 32vh;
+  height: 21vh;
   flex: 1;
 }
 .city-bg__building:nth-child(6) {
-  height: 30vh;
-  flex: 1;
+  height: 25vh;
+  flex: 2;
 }
 
 /*# sourceMappingURL=styles.css.map */
