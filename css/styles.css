@@ -105,7 +105,7 @@ body {
   letter-spacing: 0.1em;
   font-weight: normal;
   transition: background-color 0.3s ease-in;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .search__input:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -157,24 +157,24 @@ body {
   flex: 1;
 }
 .city-bg__building:nth-child(2) {
-  height: 24vh;
-  flex: 2;
+  height: 28vh;
+  flex: 1;
 }
 .city-bg__building:nth-child(3) {
-  height: 44vh;
+  height: 47vh;
   flex: 2;
 }
 .city-bg__building:nth-child(4) {
-  height: 36vh;
+  height: 41vh;
   flex: 2;
 }
 .city-bg__building:nth-child(5) {
-  height: 36vh;
-  flex: 2;
+  height: 32vh;
+  flex: 1;
 }
 .city-bg__building:nth-child(6) {
-  height: 37vh;
-  flex: 2;
+  height: 42vh;
+  flex: 1;
 }
 
 @media (min-width: 50em) {
