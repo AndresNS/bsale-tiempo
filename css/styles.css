@@ -161,24 +161,31 @@ body {
   flex: 1;
 }
 .city-bg__building:nth-child(2) {
-  height: 46vh;
-  flex: 2;
+  height: 26vh;
+  flex: 1;
 }
 .city-bg__building:nth-child(3) {
-  height: 26vh;
-  flex: 2;
+  height: 25vh;
+  flex: 1;
 }
 .city-bg__building:nth-child(4) {
-  height: 39vh;
+  height: 34vh;
   flex: 1;
 }
 .city-bg__building:nth-child(5) {
-  height: 49vh;
-  flex: 2;
+  height: 35vh;
+  flex: 1;
 }
 .city-bg__building:nth-child(6) {
-  height: 32vh;
+  height: 39vh;
   flex: 2;
+}
+
+@media (min-width: 50em) {
+  .city-bg {
+    width: 80%;
+    max-width: 960px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

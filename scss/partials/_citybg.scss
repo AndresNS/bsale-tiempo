@@ -33,3 +33,11 @@
     }
 
 }
+
+@media (min-width: 50em) {
+	.city-bg {
+        width: 80%;
+        max-width: 960px;
+        // margin: 0 auto;
+    }
+}
