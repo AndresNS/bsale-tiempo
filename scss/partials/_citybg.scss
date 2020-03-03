@@ -7,12 +7,13 @@
     width: 100%;
     opacity: 0.5;
     user-select: none;
+    font-size: 1.2em;
 
     &__building {
         overflow: hidden;
         color: #ddd;
         background-color: #000;
-        padding: 1vh 3vw ;
+        padding: 1vh 1em ;
 
         &:first-child {
             height: 20vh;
@@ -38,6 +39,6 @@
 	.city-bg {
         width: 80%;
         max-width: 960px;
-        // margin: 0 auto;
+        font-size: 2em;
     }
 }

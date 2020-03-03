@@ -5,6 +5,7 @@ const cityInput = document.getElementById("city-input");
 
 window.onload = function (){
     getWeather("santiago");
+    addWindows();
 };
 
 btn.addEventListener("click", function (event) {
@@ -55,4 +56,13 @@ function formatDate(date){
     let minutes = date.getMinutes();
 
     return `${dayName} ${dayNumber} de ${month}, ${hours}:${minutes}`;
+}
+
+function addWindows(){
+    let buildings = document.getElementsByClassName("city-bg__building");
+    for(let building of buildings){
+        for(let i=0; i<100; i++){
+            building.innerHTML += "&#x25A0; ";
+        }
+    }
 }

@@ -145,12 +145,13 @@ body {
   width: 100%;
   opacity: 0.5;
   user-select: none;
+  font-size: 1.2em;
 }
 .city-bg__building {
   overflow: hidden;
   color: #ddd;
   background-color: #000;
-  padding: 1vh 3vw;
+  padding: 1vh 1em;
 }
 .city-bg__building:first-child {
   height: 20vh;
@@ -161,30 +162,31 @@ body {
   flex: 1;
 }
 .city-bg__building:nth-child(2) {
-  height: 26vh;
-  flex: 1;
+  height: 36vh;
+  flex: 2;
 }
 .city-bg__building:nth-child(3) {
-  height: 25vh;
+  height: 48vh;
   flex: 1;
 }
 .city-bg__building:nth-child(4) {
-  height: 34vh;
+  height: 30vh;
   flex: 1;
 }
 .city-bg__building:nth-child(5) {
-  height: 35vh;
-  flex: 1;
+  height: 31vh;
+  flex: 2;
 }
 .city-bg__building:nth-child(6) {
-  height: 39vh;
-  flex: 2;
+  height: 22vh;
+  flex: 1;
 }
 
 @media (min-width: 50em) {
   .city-bg {
     width: 80%;
     max-width: 960px;
+    font-size: 2em;
   }
 }
 
