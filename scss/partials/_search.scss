@@ -1,0 +1,14 @@
+.search {
+    display: flex;
+    padding: 1em;
+
+    &__dropdown {
+        flex: 3;
+        border: none;
+        padding: 1em;
+    }
+
+    &__button {
+        flex: 1;
+    }
+}

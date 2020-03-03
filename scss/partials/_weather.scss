@@ -1,0 +1,39 @@
+.weather {
+    padding: 2em;
+    color: #fff;
+    text-shadow: 2px 2px 0px #333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__date {
+        margin-top: 0;
+        text-shadow: none;
+    }
+    
+    &__icon {
+        background-color: blue;
+    }
+
+    &__city {
+        font-size: 2rem;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+    }
+
+    &__temperature {
+        position: relative;
+        font-size: 5rem;
+        font-weight: normal;
+        margin-top: 0;
+        margin-bottom: 0;
+        .degrees {
+            position: absolute;
+        }
+    }
+
+    &__description {
+        font-size: 1.4rem;
+    }
+
+}
