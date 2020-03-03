@@ -7,48 +7,41 @@
     <title>BSale - Consulta del Tiempo</title>
 
     <!-- CSS STYLES -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
+    <!-- WEATHER INFO -->
     <div class="container">
         <div class="weather">
-            <p class="weather__date">Martes 3 de Marzo, 16:32</p>
-            <h1 class="weather__city">SANTIAGO</h1>
-            <img class="weather__icon" width="50px" height="50px">
-            <h2 class="weather__temperature">25<span class="degrees">°</span></h2>
-            <p class="weather__description">Cielo claro</p>
+            <p class="weather__date" id="datetime"></p>
+            <h1 class="weather__city" id="city-name"></h1>
+            <img class="weather__icon" id="weather-icon">
+            <h2 class="weather__temperature" id="temperature"></h2>
+            <p class="weather__description" id="weather-desc"></p>
         </div>
-
+        <!-- SEARCH BAR -->
         <div class="search">
-            <input type="text" class="search__input">
-            <!-- <select class="search__dropdown" name="city" id="city">
-                <option value="Arica">Arica</option>
-                <option value="Santiago">Santiago</option>
-                <option value="Concepcion">Concepcion</option>
-            </select> -->
-            <button class="search__button" id="btn-search">Consultar</button>
+                <input type="text" class="search__input" id="city-input">
+                <button class="search__button" id="btn-search">Consultar</button>
         </div>
 
     </div>
+
+    <!-- CITY BACKGROUND -->
     <div class="city-bg">
-        <div class="city-bg__building">■■ ■■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■■ ■■ ■ ■ ■ ■ ■ ■ ■■ ■ ■ ■ ■ ■ ■</div>
-        <div class="city-bg__building">■ ■ ■■ ■ ■ ■ ■■ ■ ■ ■ ■ ■■ ■■ ■ ■ ■ ■ ■ ■ ■■ ■ ■ ■ ■ ■ ■</div>
-        <div class="city-bg__building">■ ■ ■ ■ ■■ ■ ■ ■ ■■ ■ ■ ■ ■ ■■ ■■ ■ ■ ■ ■ ■ ■ ■■ ■ ■ ■ ■ ■ ■</div>
-        <div class="city-bg__building">■ ■ ■■ ■■ ■■ ■ ■■ ■ ■ ■ ■ ■■ ■■ ■ ■ ■ ■ ■ ■ ■■ ■ ■ ■ ■ ■ ■</div>
-        <div class="city-bg__building">■■ ■■ ■ ■ ■ ■■ ■ ■ ■ ■ ■■ ■■ ■ ■ ■ ■ ■ ■ ■■ ■ ■ ■ ■ ■ ■</div>
-        <div class="city-bg__building">■ ■ ■■ ■■ ■■ ■ ■ ■ ■■ ■ ■ ■ ■ ■■ ■■ ■ ■ ■ ■ ■ ■ ■■ ■ ■ ■ ■ ■ ■</div>
-        <div class="city-bg__building">■ ■ ■■ ■■ ■■ ■ ■ ■ ■■ ■ ■ ■ ■ ■■ ■■ ■ ■ ■ ■ ■ ■ ■■ ■ ■ ■ ■ ■ ■</div>
+        <div class="city-bg__building">■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■</div>
+        <div class="city-bg__building">■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■</div>
+        <div class="city-bg__building">■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■</div>
+        <div class="city-bg__building">■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■</div>
+        <div class="city-bg__building">■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■</div>
+        <div class="city-bg__building">■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■</div>
+        <div class="city-bg__building">■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■ ■</div>
 
     </div>
-    <!-- <input type="text" id="ciudad">
-    <button id="consultar">Consultar</button>
-    <img id="hi"></img> -->
 
     <!-- SCRIPTS -->
-    <!-- <script src="js/index.js"></script> -->
+    <script src="js/index.js"></script>
 </body>
 
 </html>

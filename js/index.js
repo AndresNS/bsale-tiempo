@@ -1,26 +1,58 @@
 "use strict";
 
-const btn = document.getElementById("consultar");
-const ciudadInput = document.getElementById("ciudad");
+const btn = document.getElementById("btn-search");
+const cityInput = document.getElementById("city-input");
 
-btn.addEventListener("click", function(event){
-    let ciudad = ciudadInput.value;
-    obtenerClima(ciudad);
+window.onload = function (){
+    getWeather("santiago");
+};
+
+btn.addEventListener("click", function (event) {
+    let city = cityInput.value;
+    getWeather(city);
 });
 
-function obtenerClima(ciudad) {
+
+/* FUNCTIONS */
+
+function getWeather(city) {
 
     const apikey = "1bf02ff4c54a03d62349710de59d9fe1";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apikey}&lang=es`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&lang=es`;
 
     fetch(url)
         .then(function (response) {
             return response.json();
         })
         .then(function (content) {
-            console.log(content);
+            
+            const datetime = document.getElementById("datetime");
+            const cityName = document.getElementById("city-name");
+            const icon = document.getElementById("weather-icon");
+            const temperature = document.getElementById("temperature");
+            const description = document.getElementById("weather-desc");
 
-            const icon = document.getElementById("hi");
+            datetime.textContent = formatDate(new Date());
+            cityName.textContent = content.name;
             icon.src = `http://openweathermap.org/img/wn/${content.weather[0].icon}@2x.png`;
+            temperature.innerHTML = KtoC(content.main.temp) + "<span class='degrees'>°</span>";
+            description.textContent = content.weather[0].description;
         });
+}
+
+function KtoC(temp) {
+    return Math.round(temp - 273.15);
+}
+
+function formatDate(date){
+    let days = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+    let months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+
+    let dayNumber = date.getDate();
+    let dayName = days[date.getDay()-1];
+    let month = months[date.getMonth()];
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+
+    return `${dayName} ${dayNumber} de ${month}, ${hours}:${minutes}`;
 }

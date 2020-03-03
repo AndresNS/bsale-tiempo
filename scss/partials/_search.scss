@@ -11,8 +11,15 @@
         color: #fff;
         font-size: 1.4rem;
         text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: normal;
+        transition: background-color 0.3s ease-in;
+        &:hover {
+            background-color: rgba($color: #fff, $alpha: 0.3);
+        }
         &:focus {
             outline: none;
+            background-color: rgba($color: #fff, $alpha: 0.3);
         }
     }
 

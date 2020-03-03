@@ -12,7 +12,7 @@
     }
 
     &__icon {
-        background-color: blue;
+        // background-color: blue;
     }
 
     &__city {
@@ -35,6 +35,7 @@
 
     &__description {
         font-size: 1.4rem;
+        text-transform: capitalize;
     }
 
 }

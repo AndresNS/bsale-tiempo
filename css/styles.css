@@ -38,9 +38,6 @@ body {
   margin-top: 0;
   text-shadow: none;
 }
-.weather__icon {
-  background-color: blue;
-}
 .weather__city {
   font-size: 2rem;
   letter-spacing: 0.07em;
@@ -58,6 +55,7 @@ body {
 }
 .weather__description {
   font-size: 1.4rem;
+  text-transform: capitalize;
 }
 
 @media (min-width: 35em) {
@@ -103,9 +101,16 @@ body {
   color: #fff;
   font-size: 1.4rem;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  transition: background-color 0.3s ease-in;
+}
+.search__input:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .search__input:focus {
   outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .search__dropdown {
   flex: 3;
@@ -139,6 +144,7 @@ body {
   align-items: flex-end;
   width: 100%;
   opacity: 0.5;
+  user-select: none;
 }
 .city-bg__building {
   overflow: hidden;
@@ -155,23 +161,23 @@ body {
   flex: 1;
 }
 .city-bg__building:nth-child(2) {
-  height: 31vh;
+  height: 46vh;
   flex: 2;
 }
 .city-bg__building:nth-child(3) {
-  height: 30vh;
+  height: 26vh;
   flex: 2;
 }
 .city-bg__building:nth-child(4) {
-  height: 38vh;
+  height: 39vh;
   flex: 1;
 }
 .city-bg__building:nth-child(5) {
-  height: 21vh;
-  flex: 1;
+  height: 49vh;
+  flex: 2;
 }
 .city-bg__building:nth-child(6) {
-  height: 25vh;
+  height: 32vh;
   flex: 2;
 }
 
